@@ -1,0 +1,16 @@
+[Unit]
+Description=Fixed VPN relay through CRM; preserve CRM and Docker networking
+Requires=docker.service
+After=network-online.target docker.service
+Wants=network-online.target
+PartOf=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/sbin/vpn-crm-relay.py apply
+ExecStop=/usr/local/sbin/vpn-crm-relay.py remove
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target docker.service

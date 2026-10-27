@@ -115,6 +115,26 @@
       "sha256": "1c1a978a9c30eeeb0e5425dbe788ea9473095158d9581d0827614dd647782514",
       "content_unchanged": true,
       "collected_at_utc": "2026-10-27T07:10:14.424092+00:00"
+    },
+    {
+      "path": "ops/scripts/vpn-crm-relay.py",
+      "source": "/usr/local/sbin/vpn-crm-relay.py",
+      "source_host": "217.18.60.102",
+      "origin": "Authored in this repository, deployed and hash-verified on CRM",
+      "bytes": 4138,
+      "sha256": "92a760d4cebc5d29eb8698d5941062971297ac34e87d6e8c069af7e6ca1035f2",
+      "content_unchanged": true,
+      "collected_at_utc": "2026-10-27T07:22:05.251069+00:00"
+    },
+    {
+      "path": "ops/systemd/vpn-crm-relay.service",
+      "source": "/etc/systemd/system/vpn-crm-relay.service",
+      "source_host": "217.18.60.102",
+      "origin": "Authored in this repository, deployed and hash-verified on CRM",
+      "bytes": 406,
+      "sha256": "5d33d41bf20eb758d3d9f795bd6a95a0c60d9a173ddd0eb82db315b765c0d081",
+      "content_unchanged": true,
+      "collected_at_utc": "2026-10-27T07:22:05.251069+00:00"
     }
   ]
 }

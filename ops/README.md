@@ -5,7 +5,9 @@
 Это запись фактической реализации, а не новый релиз служебных средств.
 
 - `scripts/` — backup, health, offsite.
+- `scripts/vpn-crm-relay.py` — фиксированный NAT на сервере CRM, отдельный от VPN-хоста.
 - `systemd/` — service/timer для этих трёх задач. Offsite timer на сервере отключён.
+- `systemd/vpn-crm-relay.service` — применяет/снимает только CRM relay chains.
 - `fail2ban/` — конфигурация host jail sshd.
 - `compose/` — candidate 2.8.8 с закреплённым digest и ограничением логов.
 - `network/` — Netplan overlay второго IP, применённый 27.10; основной DHCP сохранён.
