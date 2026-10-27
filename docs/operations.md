@@ -75,3 +75,24 @@ Timeweb Cloud допускает дополнительные платные IPv
 Источник: [сетевые настройки Timeweb Cloud](https://timeweb.cloud/docs/cloud-servers/manage-servers/network).
 
 Также: [добавление дополнительного IP в Linux](https://timeweb.cloud/docs/unix-guides/adding-ip-addresses).
+
+### Выполнено 27.10, 10:06–10:08 МСК
+
+Адрес 89.19.209.17/24 назначен на eth0 командой `ip address add`.
+Для сохранения добавлен [отдельный overlay](../ops/network/99-vpn-secondary-ip.yaml)
+в `/etc/netplan/99-vpn-secondary-ip.yaml` (0600). Существующие DHCP-конфиги,
+основной IP, DNS и default route не менялись. `netplan generate` прошёл,
+полный `netplan apply`, перезапуск сети и reboot не выполнялись.
+
+Перед изменением сохранены netplan, адреса и маршруты в
+`/var/backups/vpn-safe/network-secondary-20261027T070649Z`.
+На время внешней проверки установлен автоматический rollback только вторичного
+runtime-адреса через systemd timer; после успешных проверок и записи конфигурации
+timer остановлен. Существующие VPN-процессы не перезапускались.
+
+Проверено с CRM: оба IP отвечают на ping, доступны 22/443, реальный VLESS-запрос
+через каждый IP получает HTTP 200 с SNI yugoo.su. Прямое подключение из проблемной
+сети по-прежнему с тайм-аутом. DNS и экспорт профилей не переключались.
+
+Netplan сообщил предупреждения о широких правах двух ранее существовавших YAML.
+Новый файл имеет 0600; права старых файлов в этой задаче не изменялись.

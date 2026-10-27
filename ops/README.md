@@ -8,6 +8,7 @@
 - `systemd/` — service/timer для этих трёх задач. Offsite timer на сервере отключён.
 - `fail2ban/` — конфигурация host jail sshd.
 - `compose/` — candidate 2.8.8 с закреплённым digest и ограничением логов.
+- `network/` — Netplan overlay второго IP, применённый 27.10; основной DHCP сохранён.
 - `historical/2026-10-26/` — deploy, rollback, baseline и промежуточный compose.
 
 Скрипты содержат пути к закрытым конфигурациям, а не сами ключи или пароли.

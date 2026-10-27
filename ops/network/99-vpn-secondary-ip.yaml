@@ -1,0 +1,8 @@
+# Secondary public IPv4 assigned by Timeweb; preserve primary DHCP and gateway.
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: true
+      addresses:
+        - 89.19.209.17/24

@@ -1,7 +1,7 @@
 {
   "source_host": "89.19.210.13",
   "collected_at_utc": "2026-10-27T05:15:56.176679+00:00",
-  "method": "allowlisted SFTP reads; no live configuration or credentials copied",
+  "method": "Allowlisted SFTP reads; includes reviewed nonsecret Netplan overlay added 2026-10-27. No credentials, database or client runtime configuration copied.",
   "files": [
     {
       "path": "ops/historical/2026-10-26/compose-baseline.yml",
@@ -107,6 +107,14 @@
       "bytes": 189,
       "sha256": "e911e86205664404d57d32f07716b6c09037d69d88f665ce2cdb1761e87ac77f",
       "content_unchanged": true
+    },
+    {
+      "path": "ops/network/99-vpn-secondary-ip.yaml",
+      "source": "/etc/netplan/99-vpn-secondary-ip.yaml",
+      "bytes": 186,
+      "sha256": "1c1a978a9c30eeeb0e5425dbe788ea9473095158d9581d0827614dd647782514",
+      "content_unchanged": true,
+      "collected_at_utc": "2026-10-27T07:10:14.424092+00:00"
     }
   ]
 }
