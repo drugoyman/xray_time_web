@@ -1,0 +1,10 @@
+[Unit]
+Description=Copy newest encrypted VPN backup to Google Drive hourly
+
+[Timer]
+OnCalendar=*-*-* *:50:00 UTC
+Persistent=true
+RandomizedDelaySec=120
+
+[Install]
+WantedBy=timers.target

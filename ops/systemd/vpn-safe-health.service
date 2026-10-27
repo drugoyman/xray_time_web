@@ -1,0 +1,9 @@
+[Unit]
+Description=Observe VPN health without restarting services
+After=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/vpn-safe-health.py
+UMask=0077
+Nice=10

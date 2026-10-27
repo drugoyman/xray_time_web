@@ -1,0 +1,27 @@
+# Локальные материалы и секреты никогда не публикуются.
+.private-import/
+.env
+.env.*
+!.env.example
+secrets/
+private/
+runtime/
+vpn-profiles/
+__pycache__/
+*.pyc
+*.db
+*.sqlite*
+*.pem
+*.key
+*.p12
+*.pfx
+*.age
+*.tar
+*.tar.gz
+*.zip
+*.log
+rclone.conf
+config.json
+client*.json
+*.vless.txt
+*-QR.png

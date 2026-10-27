@@ -1,0 +1,112 @@
+{
+  "source_host": "89.19.210.13",
+  "collected_at_utc": "2026-10-27T05:15:56.176679+00:00",
+  "method": "allowlisted SFTP reads; no live configuration or credentials copied",
+  "files": [
+    {
+      "path": "ops/historical/2026-10-26/compose-baseline.yml",
+      "source": "/etc/vpn-safe/compose-baseline.yml",
+      "bytes": 520,
+      "sha256": "e7320e0c62686beb1921284566466dd35767dfb3b6845906b4f1ae9b07890259",
+      "content_unchanged": true
+    },
+    {
+      "path": "ops/compose/compose-candidate-288.yml",
+      "source": "/etc/vpn-safe/compose-candidate-288.yml",
+      "bytes": 944,
+      "sha256": "845867ef96e456b3bfcaf007d814ac25df2e7c8f152069fa7dc668ceea1ca531",
+      "content_unchanged": true
+    },
+    {
+      "path": "ops/historical/2026-10-26/compose-logging.yml",
+      "source": "/etc/vpn-safe/compose-logging.yml",
+      "bytes": 441,
+      "sha256": "fe80442692b652622cca131ba0fff572c45f4a1ae3038cc6d1607b2388e0fa6c",
+      "content_unchanged": true
+    },
+    {
+      "path": "ops/historical/2026-10-26/deploy-288.py",
+      "source": "/etc/vpn-safe/deploy-288.py",
+      "bytes": 6866,
+      "sha256": "ef3d9f27848e5f3267d16081b7308cc8b4c8df8f83dd2fb3a9b7eb3631294cdd",
+      "content_unchanged": true
+    },
+    {
+      "path": "ops/historical/2026-10-26/rollback-288.py",
+      "source": "/etc/vpn-safe/rollback-288.py",
+      "bytes": 3000,
+      "sha256": "586b3db09c8502cbc12a1c965b67c0e34614ba69d5769ef1e9737e00901d1011",
+      "content_unchanged": true
+    },
+    {
+      "path": "ops/scripts/vpn-safe-backup.py",
+      "source": "/usr/local/sbin/vpn-safe-backup.py",
+      "bytes": 2940,
+      "sha256": "d6cdc2120e52b911dc76e2b11b63932d8405eec3907b41057b04b7fbfa2647cf",
+      "content_unchanged": true
+    },
+    {
+      "path": "ops/systemd/vpn-safe-backup.service",
+      "source": "/etc/systemd/system/vpn-safe-backup.service",
+      "bytes": 186,
+      "sha256": "c977beca618c3f727f697fb822a552104d7b92a530988b09918e7adfd920f0a5",
+      "content_unchanged": true
+    },
+    {
+      "path": "ops/systemd/vpn-safe-backup.timer",
+      "source": "/etc/systemd/system/vpn-safe-backup.timer",
+      "bytes": 148,
+      "sha256": "a55fa291270e4ca0b7db5be50e782134bb853e9bb85551c7bf9fb1eb63f5796c",
+      "content_unchanged": true
+    },
+    {
+      "path": "ops/scripts/vpn-safe-health.py",
+      "source": "/usr/local/sbin/vpn-safe-health.py",
+      "bytes": 3210,
+      "sha256": "e7bf214b6ea20bb2545818224f0e9889782542490466cae0b060845cca254e67",
+      "content_unchanged": true
+    },
+    {
+      "path": "ops/systemd/vpn-safe-health.service",
+      "source": "/etc/systemd/system/vpn-safe-health.service",
+      "bytes": 175,
+      "sha256": "f5820744dc0ca62db5f1e98094d9c0b68a4eec2ce86eb9d571c291e26d58c927",
+      "content_unchanged": true
+    },
+    {
+      "path": "ops/systemd/vpn-safe-health.timer",
+      "source": "/etc/systemd/system/vpn-safe-health.timer",
+      "bytes": 134,
+      "sha256": "d6f38ce7a4197fa8aa5ade02a8c4a8f91e48d45647ac0f5fce1a5fbd0a5afbc1",
+      "content_unchanged": true
+    },
+    {
+      "path": "ops/scripts/vpn-safe-offsite.py",
+      "source": "/usr/local/sbin/vpn-safe-offsite.py",
+      "bytes": 3176,
+      "sha256": "5bafad590e564c0b15cbd66c6d9574843c9f24af2cb601b519221fd25ecba133",
+      "content_unchanged": true
+    },
+    {
+      "path": "ops/systemd/vpn-safe-offsite.service",
+      "source": "/etc/systemd/system/vpn-safe-offsite.service",
+      "bytes": 251,
+      "sha256": "73a90d6b9c75b1d7b1b65817e0b0fcd86804fc55300b823798b565a6e9182c03",
+      "content_unchanged": true
+    },
+    {
+      "path": "ops/systemd/vpn-safe-offsite.timer",
+      "source": "/etc/systemd/system/vpn-safe-offsite.timer",
+      "bytes": 186,
+      "sha256": "9d9c27d4a92ca2eabfe235b8e0f72874a8ef22fefb48629a197bb8d675cb2276",
+      "content_unchanged": true
+    },
+    {
+      "path": "ops/fail2ban/vpn-safe-sshd.local",
+      "source": "/etc/fail2ban/jail.d/vpn-safe-sshd.local",
+      "bytes": 189,
+      "sha256": "e911e86205664404d57d32f07716b6c09037d69d88f665ce2cdb1761e87ac77f",
+      "content_unchanged": true
+    }
+  ]
+}

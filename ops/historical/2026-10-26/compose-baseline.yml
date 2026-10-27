@@ -1,0 +1,18 @@
+version: '3'
+services:
+  3x-ui:
+    image: vpn-safe/3x-ui:baseline-20261026
+    container_name: 3x-ui
+    hostname: yourhostname
+    volumes:
+      - /root/3x-ui/3x-ui/db:/etc/x-ui
+      - /root/3x-ui/3x-ui/cert:/root/cert
+      - /etc/vpn-safe/panel-cert/public.key:/public.key:ro
+      - /etc/vpn-safe/panel-cert/private.key:/private.key:ro
+    environment:
+      XRAY_VMESS_AEAD_FORCED: 'false'
+      TZ: Asia/Tehran
+      X_UI_ENABLE_FAIL2BAN: 'true'
+    tty: true
+    network_mode: host
+    restart: unless-stopped

@@ -1,0 +1,11 @@
+[sshd]
+enabled = true
+backend = systemd
+port = 22
+filter = sshd
+banaction = iptables-multiport
+findtime = 10m
+maxretry = 8
+bantime = 30m
+ignoreip = 127.0.0.1/8 ::1 10.70.0.0/24
+usedns = no

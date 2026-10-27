@@ -1,0 +1,27 @@
+# Applied on 2026-10-26 after compatibility tests and an exact DB backup.
+# Recreating 3x-ui interrupts Xray connections.
+# System wg0 is independent; WG inbounds INSIDE Xray are interrupted.
+# Trojan 47987 keyFile was corrected during the deployment transaction.
+version: '3'
+services:
+  3x-ui:
+    image: ghcr.io/mhsanaei/3x-ui@sha256:785e71b6711ca887c4a0efb7e5af0abb376263e36093e23f02cab45e137ea78b
+    container_name: 3x-ui
+    hostname: yourhostname
+    volumes:
+      - /root/3x-ui/3x-ui/db:/etc/x-ui
+      - /root/3x-ui/3x-ui/cert:/root/cert
+      - /etc/vpn-safe/panel-cert/public.key:/public.key:ro
+      - /etc/vpn-safe/panel-cert/private.key:/private.key:ro
+    environment:
+      XRAY_VMESS_AEAD_FORCED: 'false'
+      TZ: Asia/Tehran
+      X_UI_ENABLE_FAIL2BAN: 'true'
+    tty: true
+    network_mode: host
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: '20m'
+        max-file: '3'

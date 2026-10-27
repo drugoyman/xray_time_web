@@ -1,0 +1,10 @@
+[Unit]
+Description=Online backup of VPN configuration
+After=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/vpn-safe-backup.py
+UMask=0077
+Nice=10
+IOSchedulingClass=idle
