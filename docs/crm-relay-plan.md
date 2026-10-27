@@ -109,3 +109,14 @@ SNAT нужен, чтобы ответы VPN возвращались через
 
 Источники: [NAT в nftables](https://wiki.nftables.org/wiki-nftables/index.php/Performing_Network_Address_Translation_(NAT)),
 [WireGuard endpoint и keepalive](https://www.wireguard.com/quickstart/).
+
+
+## Независимый изолированный WG-тест с ПК, 27.10 около 10:44 МСК
+
+По запросу владельца проверен WireGuard в отдельном процессе Windows с
+in-memory netstack. Временный peer 10.70.0.5 получил HTTPS 200 через CRM и VPN.
+На сервере подтверждены свежий handshake, двусторонний трафик и endpoint CRM.
+IPv4-маршруты, IPv4 DNS и системный proxy Windows до/после совпали.
+Временный peer и секретные файлы удалены; постоянный пользовательский 10.70.0.4
+этим испытанием не затронут. CRM healthz=200 и relay active после проверки.
+Исходник и результаты: [wg-isolated-check](../tools/wg-isolated-check/README.md).
