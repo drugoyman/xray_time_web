@@ -121,8 +121,8 @@
       "source": "/usr/local/sbin/vpn-crm-relay.py",
       "source_host": "217.18.60.102",
       "origin": "Authored in this repository, deployed and hash-verified on CRM",
-      "bytes": 4138,
-      "sha256": "92a760d4cebc5d29eb8698d5941062971297ac34e87d6e8c069af7e6ca1035f2",
+      "bytes": 4161,
+      "sha256": "2338ba887e1d793fe60f600410c48bf9e161ca9d783d3022497ae9203ffce0bc",
       "content_unchanged": true,
       "collected_at_utc": "2026-10-27T07:22:05.251069+00:00"
     },

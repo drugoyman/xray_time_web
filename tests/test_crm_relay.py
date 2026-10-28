@@ -68,12 +68,12 @@ class RelayTests(unittest.TestCase):
         relay.apply()
         self.assertEqual(self.fw.chains, expected)
         self.assertIn(('existing-docker-nat',), self.fw.chains['nat', 'PREROUTING'])
-        self.assertEqual(len(self.fw.chains['filter', 'VPNCRM_FWD']), 4)
+        self.assertEqual(len(self.fw.chains['filter', 'VPNCRM_FWD']), 6)
 
     def test_only_selected_ports_and_original_destination_are_forwarded(self):
         relay.apply()
         dnat = self.fw.chains['nat', 'VPNCRM_DNAT']
-        self.assertEqual([r[r.index('--dport') + 1] for r in dnat], ['14443', '51820'])
+        self.assertEqual([r[r.index('--dport') + 1] for r in dnat], ['14443', '51820', '22067'])
         for r in self.fw.chains['filter', 'VPNCRM_FWD']:
             self.assertEqual(r[r.index('--ctorigdst') + 1], relay.PUBLIC)
             self.assertIn('--ctdir', r)

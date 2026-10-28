@@ -13,7 +13,7 @@ import sys
 PUBLIC = '217.18.60.102'
 BACKEND = '89.19.209.17'
 INTERFACE = 'eth0'
-MAPPINGS = [('tcp', 14443, 443), ('udp', 51820, 51820)]
+MAPPINGS = [('tcp', 14443, 443), ('udp', 51820, 51820), ('udp', 22067, 22067)]
 COMMENT = 'xray_time_web CRM relay'
 CHAINS = [('nat', 'VPNCRM_DNAT'), ('nat', 'VPNCRM_SNAT'),
           ('filter', 'VPNCRM_FWD')]
