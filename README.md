@@ -26,6 +26,7 @@
 - [Диагностика сетевого инцидента](docs/network-incident.md).
 - [Клиентские настройки и QR](docs/client-profiles.md).
 - [Эксплуатация, резервные копии и откат](docs/operations.md).
+- [Локальная копия для переноса VPN от 29.10.2026](docs/migration-backup.md).
 - [Открытые задачи](docs/open-items.md).
 - [Проброс через сервер CRM](docs/crm-relay-plan.md) — VLESS и WG проверены; handshake телефона и двусторонний трафик подтверждены 27.10.
 - [Изолированный тест WG без изменения сети ПК](tools/wg-isolated-check/README.md).
